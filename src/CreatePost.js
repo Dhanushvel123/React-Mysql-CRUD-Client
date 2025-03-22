@@ -9,7 +9,7 @@ const CreatePost=()=>{
     // Data inserting...
     const handleSubmit=(e)=>{
         e.preventDefault();
-        axios.post('http://localhost:3002/addpost',{name,content})
+        axios.post('https://react-mysql-crud-server.onrender.com/addpost',{name,content})
         .then((response)=>{
             console.log(response.data);
             navigate("/"); 
