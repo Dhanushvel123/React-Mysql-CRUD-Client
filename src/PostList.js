@@ -11,7 +11,7 @@ const PostList = () => {
        
     },[])
     const handleDelete=async(id)=>{
-        await axios.delete(`//https://react-mysql-crud-server.onrender.com/deletepost/${id}`)
+        await axios.delete(`https://react-mysql-crud-server.onrender.com/deletepost/${id}`)
         setPost(post.filter(post=>post.id!==id))
     }
     
