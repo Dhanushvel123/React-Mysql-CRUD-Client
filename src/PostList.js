@@ -6,12 +6,12 @@ const PostList = () => {
     const [post,setPost]=useState([])
 
     useEffect(()=>{
-        axios.get('http://localhost:3002/getpost')
+        axios.get('https://react-mysql-crud-server.onrender.com/getpost')
        .then(response=>setPost(response.data))
        
     },[])
     const handleDelete=async(id)=>{
-        await axios.delete(`http://localhost:3002/deletepost/${id}`)
+        await axios.delete(`//https://react-mysql-crud-server.onrender.com/deletepost/${id}`)
         setPost(post.filter(post=>post.id!==id))
     }
     
