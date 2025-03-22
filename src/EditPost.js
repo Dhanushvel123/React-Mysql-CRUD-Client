@@ -11,7 +11,7 @@ const EditPost=()=>{
     useEffect(()=>{
         const fetchPost=async()=>{
             try{ 
-     const res=await axios.get(`http://localhost:3002/getpost/${id}`)
+     const res=await axios.get(`https://react-mysql-crud-server.onrender.com/getpost/${id}`)
          setName(res.data[0].name);
          setContent(res.data[0].content);
             }catch(error)
@@ -25,7 +25,7 @@ const EditPost=()=>{
         const handleSubmit=async(e)=>{
             e.preventDefault();
             try{
-                await axios.put(`http://localhost:3002/updatepost/${id}`,{name,content})
+                await axios.put(`https://react-mysql-crud-server.onrender.com/updatepost/${id}`,{name,content})
                 navigate("/");
             }
             catch(error){
