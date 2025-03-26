@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Routes,Route } from "react-router-dom";
+import{HashRouter, Routes,Route } from "react-router-dom";
 import NavigationBar from "./NavBar";
 import CreatePost from "./CreatePost";
 import EditPost from "./EditPost";
@@ -7,7 +7,7 @@ import  PostList from "./PostList";
 
 const App=()=>{
   return(
-    <Router>
+    <HashRouter>
       <div>
       <NavigationBar/>
         <div className="container">
@@ -18,7 +18,7 @@ const App=()=>{
           </Routes>
         </div>  
       </div>
-    </Router>
+    </HashRouter>
   );
 }
 
